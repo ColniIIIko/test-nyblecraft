@@ -49,32 +49,37 @@ function HighlightedTextField({
   );
 
   return (
-    <div
-      className={`field-wrapper ${className || ''}`}
-      onClick={() => textFieldRef.current?.focus()}
-    >
-      <textarea
-        value={value}
-        ref={textFieldRef}
-        style={{ opacity: 0, width: 0, height: 0, position: 'fixed', zIndex: -100 }}
-        onChange={handleChange}
-      ></textarea>
-      <p className='text-field'>
-        {textComponents.map((component, index) =>
-          regex.test(component) ? (
-            <Component
-              key={Date.now().toString(16) + Math.random()}
-              text={component}
-              id={index}
-            />
-          ) : (
-            component
-          )
-        )}
+    <>
+      <div
+        className={`field-wrapper ${className || ''}`}
+        onClick={() => textFieldRef.current?.focus()}
+      >
+        <textarea
+          value={value}
+          ref={textFieldRef}
+          style={{ opacity: 0, width: 0, height: 0, position: 'fixed', zIndex: -100 }}
+          onChange={handleChange}
+        ></textarea>
+        <p className='text-field'>
+          {textComponents.map((component, index) =>
+            regex.test(component) ? (
+              <Component
+                key={Date.now().toString(16) + Math.random()}
+                text={component}
+                id={index}
+              />
+            ) : (
+              component
+            )
+          )}
 
-        <span className='text-field__cursor'> </span>
+          <span className='text-field__cursor'> </span>
+        </p>
+      </div>
+      <p className='warning-message'>
+        *navigation with arrows and selection dont work in the input above {':)'}
       </p>
-    </div>
+    </>
   );
 }
 
