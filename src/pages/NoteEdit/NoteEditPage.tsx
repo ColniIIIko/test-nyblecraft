@@ -38,7 +38,7 @@ function NoteEditPage() {
         <HighlightedTextField
           className='note-edit__body-input'
           onChange={(e) => setBody(e.target.value)}
-          regex={/\s?#[^\s#]+/g}
+          regex={/#[^\s#]+/g}
           value={body}
           setHighlighted={setTags}
           Component={HighlightedText}
