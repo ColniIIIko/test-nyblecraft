@@ -1,0 +1,20 @@
+@use '../../scss/link.scss';
+
+.notes{
+    &-header{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &-create-link{
+        @extend %link;
+    }
+}
+
+.notes-list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: max-content;
+}

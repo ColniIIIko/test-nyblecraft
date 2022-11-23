@@ -1,0 +1,11 @@
+@use './variables.scss';
+
+%link{
+    color: variables.$color-link;
+    text-decoration: none;
+    transition: all .3s ease;
+    &:hover{
+        color: variables.$color-font-hover;
+        text-decoration: underline;
+    }
+}

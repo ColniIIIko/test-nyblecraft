@@ -1,0 +1,27 @@
+%tag{
+    display: inline;
+    border-radius: 4px;
+    padding: 1.5px 6px;
+    border-bottom: solid 2.5px;
+}
+
+@mixin tag-color($color){
+    color: $color;
+    background-color: darken($color, 40);
+    border-bottom-color: $color;
+}
+
+.tag-green{
+    @extend %tag;
+    @include tag-color(#58c4dc);
+}
+
+.tag-yellow{
+    @extend %tag;
+    @include tag-color(#fabd62);
+}
+
+.tag-purple{
+    @extend %tag;
+    @include tag-color(#8891ec);
+}

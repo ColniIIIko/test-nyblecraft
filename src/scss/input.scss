@@ -1,0 +1,8 @@
+@use './variables.scss';
+
+%input{
+    outline: none;
+    border: 2px solid variables.$color-font;
+    padding: 2px 5px;
+    border-radius: 5px;
+}

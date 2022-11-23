@@ -1,0 +1,39 @@
+@use '../../scss/variables.scss';
+@use '../../scss/button.scss';
+@use '../../scss/input.scss';
+
+.note-add{
+    display: flex;
+    flex-direction: column;
+
+    &__inputs{
+        padding: 15px 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    &__title-input{
+        @extend %input;
+        font-size: 1.5rem;
+        max-width: 300px;
+    }
+
+    &__body-input{
+        @extend %input;
+        font-size: 1.2rem;
+    }
+
+    &__tags{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        font-size: .8rem;
+    }
+
+    &__create-btn{
+        align-self: flex-start;
+        font-size: 1em;
+        @extend %button;
+    }
+}

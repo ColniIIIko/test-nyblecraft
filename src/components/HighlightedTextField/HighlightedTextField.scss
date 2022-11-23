@@ -1,0 +1,23 @@
+.field-wrapper{
+    width: 100%;
+    white-space: pre-wrap;
+
+    &:focus-within .text-field__cursor{
+        content: ' ';
+        line-height: calc(1em + 4px);
+        display: inline-block;
+        width: 1px;
+        background-color: black;
+        animation: text-cursor 1s step-end infinite;
+    } 
+}
+
+@keyframes text-cursor {
+    0%{
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 1;
+    }
+}
