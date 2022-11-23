@@ -18,3 +18,21 @@
     row-gap: 20px;
     width: max-content;
 }
+
+.notes__tags-filter{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    font-size: .9rem;
+    padding: 10px;
+}
+
+.tag{
+    cursor: pointer;
+    transition: opacity .2s ease;
+    opacity: 0.4;
+
+    &_active{
+        opacity: 1;
+    }
+}

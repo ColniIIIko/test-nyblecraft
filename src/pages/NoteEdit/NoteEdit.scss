@@ -21,6 +21,7 @@
 
     &__body-input{
         @extend %input;
+        padding-right: 0;
         font-size: 1.2rem;
     }
 
